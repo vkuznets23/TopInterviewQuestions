@@ -15,6 +15,6 @@ function removeDup(nums: number[]): number {
   return k
 }
 
-const nums = [1, 1, 2]
-console.log(removeDup(nums))
-console.log(nums)
+const removeDupNums = [1, 1, 2]
+console.log(removeDup(removeDupNums))
+console.log(removeDupNums)

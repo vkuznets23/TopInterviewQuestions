@@ -1,4 +1,4 @@
-const nums2 = [1, 2, 3, 4, 5, 6, 7]
+const rotateNums = [1, 2, 3, 4, 5, 6, 7]
 const k = 3
 
 function rotate(nums: number[], k: number): void {
@@ -9,4 +9,4 @@ function rotate(nums: number[], k: number): void {
   console.log(nums)
 }
 
-rotate(nums2, k)
+rotate(rotateNums, k)
