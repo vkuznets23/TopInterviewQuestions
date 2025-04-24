@@ -1,5 +1,5 @@
 function singleNumber(nums: number[]): number {
-  const map = new Map()
+  const map = new Map<number, boolean>()
   nums = nums.sort()
   let singleVal = 0
   for (let i = 0; i < nums.length; i++) {
