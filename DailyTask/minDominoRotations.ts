@@ -24,6 +24,7 @@ function minDominoRotations(tops: number[], bottoms: number[]): number {
 const tops = [2, 4, 2, 3]
 const bottoms = [4, 2, 1, 2]
 
-//So Infinity is just a way to say: "I don't have a meaningful value yet, so I'll use a number that's guaranteed to be larger than anything else." If you initialized minValue = 0, then Math.min(0, 10) would always return 0, and you'd miss the actual minimum value
+//So Infinity is just a way to say: "I don't have a meaningful value yet, so I'll use a number that's guaranteed to be larger than anything else." 
+//If you initialized minValue = 0, then Math.min(0, 10) would always return 0, and you'd miss the actual minimum value
 
 console.log(minDominoRotations(tops, bottoms))
