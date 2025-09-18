@@ -1,17 +1,18 @@
-const numsArr2 = [0, 0, 1, 1, 1, 1, 2, 3, 3]
+const DuplicatesFromSortedArrayNums = [0, 0, 1, 1, 1, 1, 2, 3, 3]
 
-function removeDuplicates3(nums: number[]): number {
-  let k = 0
-  for (let i = 0; i <= nums.length; i++) {
-    if (nums[i] !== nums[i + 2]) {
-      nums[k] = nums[i]
-      k++
+function removeDuplicatesFromSortedArray(nums: number[]): number {
+  if (nums.length === 0) return 0
+
+  let writeIndex = 2
+
+  for (let readIndex = 2; readIndex < nums.length; readIndex++) {
+    if (nums[readIndex] !== nums[writeIndex - 2]) {
+      nums[writeIndex] = nums[readIndex]
+      writeIndex++
     }
   }
 
-  console.log(nums)
-  console.log(k)
-  return k
+  return writeIndex
 }
 
-removeDuplicates3(numsArr2)
+console.log(removeDuplicatesFromSortedArray(DuplicatesFromSortedArrayNums))
