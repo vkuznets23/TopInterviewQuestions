@@ -28,5 +28,18 @@ function maxProfit2(prices: number[]): number {
   return profit
 }
 
+// version 3
+function maxProfit3(prices: number[]): number {
+  let min_price = Infinity
+  let max_profit = 0
+
+  for (let price of prices) {
+    if (price < min_price) min_price = price
+    else if (price - min_price > max_profit) max_profit = price - min_price
+  }
+  return max_profit
+}
+
 maxProfit1(prices)
 maxProfit2(prices)
+maxProfit3(prices)
