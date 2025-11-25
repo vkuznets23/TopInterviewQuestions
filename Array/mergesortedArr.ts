@@ -8,39 +8,60 @@
 // const m = 3
 // const n = 3
 
-const num1 = [0]
-const m = 0
-const num2 = [1]
-const n = 1
+const num1: number[] = [-1, 0, 0, 3, 3, 3, 0, 0, 0]
+const num2: number[] = [1, 2, 2]
+const m = 3
+const n = 3
+
+// const num1 = [0]
+// const m = 0
+// const num2 = [1]
+// const n = 1
 
 // const num1 = [1]
 // const m = 1
 // const num2: number[] = []
 // const n = 0
 
+// function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+//   let p1 = m - 1 // last reasonable element nums1
+//   let p2 = n - 1 // last element nums2
+//   let p = m + n - 1 // last element nums1
+
+//   while (p1 >= 0 && p2 >= 0) {
+//     if (nums1[p1] > nums2[p2]) {
+//       nums1[p] = nums1[p1]
+//       p1--
+//     } else {
+//       nums1[p] = nums2[p2]
+//       p2--
+//     }
+//     p--
+//   }
+
+//   // since nums1 might be empty
+//   while (p2 >= 0) {
+//     nums1[p] = nums2[p2]
+//     p2--
+//     p--
+//   }
+
+//   console.log(nums1)
+// }
+
+// merge(num1, m, num2, n)
+
 function merge(nums1: number[], m: number, nums2: number[], n: number): void {
-  let p1 = m - 1 // last reasonable element nums1
-  let p2 = n - 1 // last element nums2
-  let p = m + n - 1 // last element nums1
+  let l = 0
 
-  while (p1 >= 0 && p2 >= 0) {
-    if (nums1[p1] > nums2[p2]) {
-      nums1[p] = nums1[p1]
-      p1--
-    } else {
-      nums1[p] = nums2[p2]
-      p2--
+  for (let i = 0; i < nums1.length; i++) {
+    if (nums1[i] === 0 && i >= m) {
+      nums1[i] = nums2[l]
+      l++
     }
-    p--
   }
 
-  // since nums1 might be empty
-  while (p2 >= 0) {
-    nums1[p] = nums2[p2]
-    p2--
-    p--
-  }
-
+  nums1.sort((a, b) => a - b)
   console.log(nums1)
 }
 
